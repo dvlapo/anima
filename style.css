@@ -1,0 +1,158 @@
+@import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
+@import url("https://fonts.cdnfonts.com/css/chillax");
+body {
+    font-family: "PP Neue Montreal", sans-serif;
+    color: #363636;
+    background-color: aliceblue;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+ul,
+menu {
+    list-style: none;
+}
+h1,
+h2,
+h4 {
+    line-height: 1;
+}
+h2 {
+    text-wrap: balance;
+}
+footer {
+    width: clamp(1000px, 95%, 1200px);
+    height: 100vh;
+    margin: auto;
+    display: grid;
+    place-content: center;
+}
+.footer__main {
+    padding: 3rem;
+    border-radius: 60px;
+    background-color: rgb(226, 238, 251);
+    margin-bottom: 1rem;
+    height: 450px;
+    overflow: hidden;
+}
+h1 {
+    font-size: 300px;
+    text-align: center;
+    text-wrap: nowrap;
+    font-family: "Chillax", sans-serif;
+}
+.letter-i {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-175px);
+}
+.tittle {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    display: grid;
+    place-content: center;
+    transform: translateY(22px);
+}
+.tittle::before,
+.tittle::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    transition: 800ms;
+    /* transition-timing-function: cubic-bezier(0.11, 1.23, 0.83, 0.67); */
+    transition-timing-function: cubic-bezier(0, 1.02, 0.79, 0.82);
+}
+.tittle.scaledown::before,
+.tittle.scaledown::after {
+    transform: scale(0);
+}
+.tittle::before {
+    background-color: orangered;
+    width: 70px;
+    height: 70px;
+    z-index: -2;
+    transform: scale(30);
+}
+.tittle::after {
+    background-color: #363636;
+    width: 70px;
+    height: 70px;
+    z-index: -1;
+    transform: scale(22);
+}
+.footer__main__top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    justify-items: center;
+    margin-bottom: 5rem;
+    padding-inline: 3rem;
+}
+menu.socials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem 0.4rem;
+}
+.contact h4 {
+    font-size: 1.3em;
+}
+.contact div:nth-child(1) h4 {
+    color: orangered;
+}
+.contact div:nth-child(2) h4 {
+    color: slateblue;
+}
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-inline: auto;
+}
+.footer__bottom ul {
+    display: flex;
+    gap: 1rem;
+    color: #716f6f;
+}
+li,
+p {
+    color: #716f6f;
+}
+section > div {
+    margin-bottom: 0.5rem;
+}
+h4 {
+    margin-bottom: 0.2rem;
+}
+
+/* Tittle animation */
+.tittle.add-bounce svg ellipse {
+    animation: bounce 500ms ease-in-out infinite alternate backwards;
+    transition: 100ms;
+}
+
+@keyframes bounce {
+    from {
+        cx: 25;
+        cy: 25;
+        rx: 25;
+        ry: 25;
+        transform: translateY(21px);
+    }
+    to {
+        cx: 25;
+        cy: 20;
+        rx: 30;
+        ry: 20;
+        transform: translateY(-10px);
+    }
+}
