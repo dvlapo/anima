@@ -68,8 +68,7 @@ h1 {
     content: "";
     border-radius: 50%;
     position: absolute;
-    transition: 800ms;
-    transition-timing-function: cubic-bezier(0, 1.02, 0.79, 0.82);
+    transition: 800ms cubic-bezier(0, 1.02, 0.79, 0.82);
 }
 .tittle.scaledown::before,
 .tittle.scaledown::after {
@@ -102,14 +101,36 @@ menu.socials {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.2rem 0.4rem;
 }
+menu.socials li {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.contact {
+    margin-top: -0.5rem;
+}
 .contact h4 {
     font-size: 1.3em;
+    color: var(--color, #363636);
 }
 .contact div:nth-child(1) h4 {
-    color: orangered;
+    --color: orangered;
 }
 .contact div:nth-child(2) h4 {
-    color: slateblue;
+    --color: slateblue;
+}
+.contact h4 span {
+    background-color: var(--color);
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    place-content: center;
+    place-items: center;
+    border-radius: 50%;
+}
+.contact ion-icon {
+    color: white;
+    transform: rotate(45deg);
 }
 .footer__bottom {
     display: flex;

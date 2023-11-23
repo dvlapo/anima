@@ -6,9 +6,19 @@
         <title>Anima</title>
         <link rel="stylesheet" href="style.css" />
         <script defer src="app.js"></script>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule=""
+            src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+        ></script>
     </head>
     <body>
-        <div class="top">scroll down</div>
+        <div class="top">
+            scroll down<ion-icon name="arrow-down"></ion-icon>
+        </div>
 
         <footer>
             <div class="footer__main">
@@ -27,21 +37,46 @@
                     <section>
                         <h4>Follow me</h4>
                         <menu class="socials">
-                            <li>@username</li>
-                            <li>@username</li>
-                            <li>@username</li>
-                            <li>@username</li>
-                            <li>@username</li>
+                            <li>
+                                <ion-icon name="logo-twitter"></ion-icon>
+                                @username
+                            </li>
+                            <li>
+                                <ion-icon name="logo-instagram"></ion-icon>
+                                @username
+                            </li>
+                            <li>
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                                @username
+                            </li>
+                            <li>
+                                <ion-icon name="logo-reddit"></ion-icon>
+                                @username
+                            </li>
+                            <li>
+                                <ion-icon name="logo-github"></ion-icon>
+                                @username
+                            </li>
                         </menu>
                     </section>
 
                     <section class="contact">
                         <div>
-                            <h4>Contact Me</h4>
+                            <h4>
+                                Contact Me
+                                <span
+                                    ><ion-icon name="arrow-up"></ion-icon
+                                ></span>
+                            </h4>
                             <p>Let's work together</p>
                         </div>
                         <div>
-                            <h4>Courses & Tools</h4>
+                            <h4>
+                                Courses & Tools
+                                <span
+                                    ><ion-icon name="arrow-up"></ion-icon
+                                ></span>
+                            </h4>
                             <p>Creative Tools</p>
                         </div>
                     </section>
@@ -77,7 +112,7 @@
                 </ul>
                 <ul>
                     <li>Lagos</li>
-                    <li>11:45AM</li>
+                    <li><span id="hour"></span>:<span id="minute"></span></li>
                     <li>22°C</li>
                 </ul>
             </div>
