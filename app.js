@@ -16,19 +16,21 @@ function scaleDownTittle() {
     }
 }
 
-function formatMinute(min) {
-    return min.toString().length < 2 ? `0${min}` : min;
+function formatTime(hr, min) {
+    const hour = hr.toString().length < 2 ? `0${hr}` : hr;
+    const minute = min.toString().length < 2 ? `0${min}` : min;
+
+    return `${hour}:${minute}`;
 }
 
-function getTime() {
+function renderTime() {
     const now = new Date();
     const hours = now.getHours();
     const minutes = now.getMinutes();
 
-    document.querySelector("#hour").innerHTML = hours;
-    document.querySelector("#minute").innerHTML = formatMinute(minutes);
+    document.querySelector("#time").innerHTML = formatTime(hours, minutes);
 }
-getTime();
-setInterval(getTime, 60000);
+renderTime();
+setInterval(renderTime, 60000);
 
 window.addEventListener("scroll", scaleDownTittle);
