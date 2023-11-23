@@ -143,8 +143,8 @@ h4 {
         cx: 25;
         cy: 25;
         rx: 25;
-        ry: 25;
-        transform: translateY(21px);
+        ry: 27;
+        transform: translateY(18px);
     }
     to {
         cx: 25;
