@@ -16,6 +16,9 @@ body {
     place-content: center;
     place-items: center;
 }
+.top ion-icon {
+    animation: bounceArrow 200ms ease-in-out infinite alternate;
+}
 ul,
 menu {
     list-style: none;
@@ -173,5 +176,14 @@ h4 {
         rx: 30;
         ry: 20;
         transform: translateY(-10px);
+    }
+}
+
+@keyframes bounceArrow {
+    from {
+        transform: translateY(4px);
+    }
+    to {
+        transform: translateY(0);
     }
 }
