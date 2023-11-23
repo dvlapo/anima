@@ -1,9 +1,18 @@
 @import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
 @import url("https://fonts.cdnfonts.com/css/chillax");
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #363636;
+    border-radius: 100px;
+}
 body {
     font-family: "PP Neue Montreal", sans-serif;
     color: #363636;
     background-color: aliceblue;
+    cursor: url(./cursor.png), auto;
 }
 * {
     margin: 0;
