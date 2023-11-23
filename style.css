@@ -134,9 +134,8 @@ h4 {
 }
 
 /* Tittle animation */
-.tittle.add-bounce svg ellipse {
+.tittle.bounce svg ellipse {
     animation: bounce 500ms ease-in-out infinite alternate backwards;
-    transition: 100ms;
 }
 
 @keyframes bounce {

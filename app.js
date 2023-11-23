@@ -8,11 +8,11 @@ function scaleDownTittle() {
     if (percentReveal <= 40) {
         tittle.classList.add("scaledown");
         setTimeout(() => {
-            tittle.classList.add("add-bounce");
-        }, 3000);
+            tittle.classList.add("bounce");
+        }, 900);
     } else {
         tittle.classList.remove("scaledown");
-        tittle.classList.remove("add-bounce");
+        tittle.classList.remove("bounce");
     }
 }
 
